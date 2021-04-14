@@ -13,7 +13,7 @@
   <Period
     id="1"
     duration="PT49M39.480S">
-    <BaseURL>dash/</BaseURL>
+    <BaseURL>https://cf.jos.c4assets.com/CH4_08_02_900_72183001001001_001/CH4_08_02_900_72183001001001_001_J01.ism/dash/</BaseURL>
     <AdaptationSet
       id="1"
       group="1"
