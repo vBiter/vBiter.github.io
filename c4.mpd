@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Unified Streaming Platform (version=1.10.28-22802) -->
+<MPD
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="urn:mpeg:dash:schema:mpd:2011"
+  xmlns:cenc="urn:mpeg:cenc:2013"
+  xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+  type="static"
+  mediaPresentationDuration="PT49M39.480S"
+  maxSegmentDuration="PT7S"
+  minBufferTime="PT10S"
+  profiles="urn:mpeg:dash:profile:isoff-live:2011">
+  <Period
+    id="1"
+    duration="PT49M39.480S">
+    <BaseURL>dash/</BaseURL>
+    <AdaptationSet
+      id="1"
+      group="1"
+      contentType="audio"
+      segmentAlignment="true"
+      audioSamplingRate="48000"
+      mimeType="audio/mp4"
+      codecs="mp4a.40.2"
+      startWithSAP="1">
+      <AudioChannelConfiguration
+        schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011"
+        value="2" />
+      <!-- Common Encryption -->
+      <ContentProtection
+        schemeIdUri="urn:mpeg:dash:mp4protection:2011"
+        value="cenc"
+        cenc:default_KID="00000000-0000-0000-0000-000003919734">
+      </ContentProtection>
+      <!-- PlayReady -->
+      <ContentProtection
+        schemeIdUri="urn:uuid:9A04F079-9840-4286-AB92-E65BE0885F95"
+        value="MSPR 2.0">
+      </ContentProtection>
+      <!-- Widevine -->
+      <ContentProtection
+        schemeIdUri="urn:uuid:EDEF8BA9-79D6-4ACE-A3C8-27DCD51D21ED">
+      </ContentProtection>
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main" />
+      <SegmentTemplate
+        timescale="48000"
+        duration="288000"
+        initialization="CH4_08_02_900_72183001001001_001_J01-$RepresentationID$.dash"
+        media="CH4_08_02_900_72183001001001_001_J01-$RepresentationID$-$Number$.m4s">
+      </SegmentTemplate>
+      <Representation
+        id="audio=128000"
+        bandwidth="128000">
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet
+      id="2"
+      group="2"
+      contentType="video"
+      par="16:9"
+      minBandwidth="501000"
+      maxBandwidth="3003000"
+      maxWidth="1920"
+      maxHeight="1080"
+      segmentAlignment="true"
+      sar="1:1"
+      frameRate="25"
+      mimeType="video/mp4"
+      startWithSAP="1">
+      <!-- Common Encryption -->
+      <ContentProtection
+        schemeIdUri="urn:mpeg:dash:mp4protection:2011"
+        value="cenc"
+        cenc:default_KID="00000000-0000-0000-0000-000003919734">
+      </ContentProtection>
+      <!-- PlayReady -->
+      <ContentProtection
+        schemeIdUri="urn:uuid:9A04F079-9840-4286-AB92-E65BE0885F95"
+        value="MSPR 2.0">
+      </ContentProtection>
+      <!-- Widevine -->
+      <ContentProtection
+        schemeIdUri="urn:uuid:EDEF8BA9-79D6-4ACE-A3C8-27DCD51D21ED">
+      </ContentProtection>
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main" />
+      <SegmentTemplate
+        timescale="600"
+        duration="3600"
+        initialization="CH4_08_02_900_72183001001001_001_J01-$RepresentationID$.dash"
+        media="CH4_08_02_900_72183001001001_001_J01-$RepresentationID$-$Number$.m4s">
+      </SegmentTemplate>
+      <Representation
+        id="video=501000"
+        bandwidth="501000"
+        width="512"
+        height="288"
+        codecs="avc1.42401E"
+        scanType="progressive">
+      </Representation>
+      <Representation
+        id="video=801000"
+        bandwidth="801000"
+        width="640"
+        height="360"
+        codecs="avc1.4D401F"
+        scanType="progressive">
+      </Representation>
+      <Representation
+        id="video=1002000"
+        bandwidth="1002000"
+        width="640"
+        height="360"
+        codecs="avc1.644029"
+        scanType="progressive">
+      </Representation>
+      <Representation
+        id="video=1202000"
+        bandwidth="1202000"
+        width="1024"
+        height="576"
+        codecs="avc1.644029"
+        scanType="progressive">
+      </Representation>
+      <Representation
+        id="video=1502000"
+        bandwidth="1502000"
+        width="1024"
+        height="576"
+        codecs="avc1.644029"
+        scanType="progressive">
+      </Representation>
+      <Representation
+        id="video=2003000"
+        bandwidth="2003000"
+        width="1280"
+        height="720"
+        codecs="avc1.644029"
+        scanType="progressive">
+      </Representation>
+      <Representation
+        id="video=3003000"
+        bandwidth="3003000"
+        width="1920"
+        height="1080"
+        codecs="avc1.644029"
+        scanType="progressive">
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
